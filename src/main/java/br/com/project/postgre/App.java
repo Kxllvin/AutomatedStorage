@@ -6,6 +6,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.stereotype.Component;
+
+@SpringBootApplication
+@EnableScheduling
+@Component
 public class App 
 {
     private static final String URL = "jdbc:postgresql://localhost:5432/gerenciador_projetos";
@@ -88,6 +96,7 @@ public class App
     }
 
     public static void main(String[] args) {
+        SpringApplication.run(App.class, args);
         App dao = new App();
 
         dao.adicionarProduto("Macarrão", 12.75);
@@ -99,6 +108,5 @@ public class App
 
         //dao.deletarProduto(1);
         dao.listarProduto();
-
     }
 }
