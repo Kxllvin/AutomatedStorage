@@ -93,7 +93,7 @@
         <artifactId>spring-boot-maven-plugin</artifactId>
         <version>${spring.boot.version}</version>
         <configuration>
-          <mainClass>br.com.project.postgre.App</mainClass> <!-- ou Application, dependendo de qual você escolheu -->
+          <mainClass>br.com.project.postgre.App</mainClass>
         </configuration>
       </plugin>
     </plugins>
